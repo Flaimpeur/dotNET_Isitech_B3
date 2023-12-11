@@ -1,0 +1,15 @@
+C:\Users\Flaimpeur\Documents\Cours Isitech\RPI\B3\.Net\dev\consoleProject\bin\Debug\net8.0\consoleProject.exe
+C:\Users\Flaimpeur\Documents\Cours Isitech\RPI\B3\.Net\dev\consoleProject\bin\Debug\net8.0\consoleProject.deps.json
+C:\Users\Flaimpeur\Documents\Cours Isitech\RPI\B3\.Net\dev\consoleProject\bin\Debug\net8.0\consoleProject.runtimeconfig.json
+C:\Users\Flaimpeur\Documents\Cours Isitech\RPI\B3\.Net\dev\consoleProject\bin\Debug\net8.0\consoleProject.dll
+C:\Users\Flaimpeur\Documents\Cours Isitech\RPI\B3\.Net\dev\consoleProject\bin\Debug\net8.0\consoleProject.pdb
+C:\Users\Flaimpeur\Documents\Cours Isitech\RPI\B3\.Net\dev\consoleProject\obj\Debug\net8.0\consoleProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Flaimpeur\Documents\Cours Isitech\RPI\B3\.Net\dev\consoleProject\obj\Debug\net8.0\consoleProject.AssemblyInfoInputs.cache
+C:\Users\Flaimpeur\Documents\Cours Isitech\RPI\B3\.Net\dev\consoleProject\obj\Debug\net8.0\consoleProject.AssemblyInfo.cs
+C:\Users\Flaimpeur\Documents\Cours Isitech\RPI\B3\.Net\dev\consoleProject\obj\Debug\net8.0\consoleProject.csproj.CoreCompileInputs.cache
+C:\Users\Flaimpeur\Documents\Cours Isitech\RPI\B3\.Net\dev\consoleProject\obj\Debug\net8.0\consoleProject.sourcelink.json
+C:\Users\Flaimpeur\Documents\Cours Isitech\RPI\B3\.Net\dev\consoleProject\obj\Debug\net8.0\consoleProject.dll
+C:\Users\Flaimpeur\Documents\Cours Isitech\RPI\B3\.Net\dev\consoleProject\obj\Debug\net8.0\refint\consoleProject.dll
+C:\Users\Flaimpeur\Documents\Cours Isitech\RPI\B3\.Net\dev\consoleProject\obj\Debug\net8.0\consoleProject.pdb
+C:\Users\Flaimpeur\Documents\Cours Isitech\RPI\B3\.Net\dev\consoleProject\obj\Debug\net8.0\consoleProject.genruntimeconfig.cache
+C:\Users\Flaimpeur\Documents\Cours Isitech\RPI\B3\.Net\dev\consoleProject\obj\Debug\net8.0\ref\consoleProject.dll
