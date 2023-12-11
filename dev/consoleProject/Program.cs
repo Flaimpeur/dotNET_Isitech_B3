@@ -9,7 +9,7 @@ class Program
         Console.WriteLine("Press any key to exist.");
     }
 
-    // Exo prof
+    // Exo prof corriger
     public static int Sum(IEnumerable<object> values)
 {
     var sum = 0;
@@ -24,10 +24,10 @@ class Program
             break;
             case IEnumerable<object> subList when subList.Any():
             sum += Sum(subList);
-            break;
+            break; //Il manquait de quoi sortir
         }
     }
-    return sum;
+    return sum; // Et il ne retournais rien
 }
 }
 
