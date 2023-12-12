@@ -13,21 +13,21 @@ namespace BookStoreAPI.Controllers; // BookStoreAPI est l'espace de nom racine d
 [ApiController]
 public class BookController : ControllerBase
 {
-    public static List<Book> books = new List<Book>
+    public static List<Book> books = new List<Book> //J'inisialise d'abord ma liste de livre en j'y ajoute 1 livre de base
     {
         new Book { Id = 1, Title = "Le seigneur des anneaux", Author = "J.R.R Tolkien" }
     };
 
-    [HttpGet("books")]
+    [HttpGet("books")] //J'utilise une méthode get pour récup se qui il y a
     public ActionResult<List<Book>> GetBooks()
     {
         return Ok(books);
     }
 
-    [HttpPost("books")]
+    [HttpPost("books")] // La méthode post sert ici a pouvoir intéragir entre l'utilisateur et notre code, ici la liste donc pouvoir rajouter des livres dans la liste
     public ActionResult<Book> AddBook(Book book)
     {
-        books.Add(book);
+        books.Add(book); //Ajout du livre écrit par l'utilisateur dans la liste
         return CreatedAtAction(nameof(GetBooks), new{id = book.Id}, book);
     }
 }
