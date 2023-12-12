@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2nXeHuLxZlmW8MMmYZUH1LdrK9wTYbW+gu4rfqWD0w7AwIrhQyfBq5+GqINsZ+XkLYGQw3uHj/TU1jiMUPSP6Q==",
+  "dgSpecHash": "AISLG2QSEApEL4TatuE0pspo8xmECP+4wMFmNC1S/xNDQ2kMxuGC3MeY0r5/wMGbTnmGOoZgL3q2FMv9KOnx7A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Flaimpeur\\Documents\\Cours Isitech\\RPI\\B3\\.Net\\dev\\BookStoreAPI\\BookStoreAPI.csproj",
+  "projectFilePath": "c:\\Users\\Flaimpeur\\Documents\\Cours Isitech\\RPI\\B3\\.Net\\dev\\BookStoreAPI\\BookStoreAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Flaimpeur\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Flaimpeur\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",

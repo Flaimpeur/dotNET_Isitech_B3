@@ -17,3 +17,5 @@ dotnet --list-sdks //liste des SDK installés
 ## Mes notes :
 
 L'API d'un objet c'est comment on veut que l'objet intéragisse avec le monde extérieur, avec l'utilisateur
+
+CRUD = creat read update delete
