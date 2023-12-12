@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Flaimpeur\\Documents\\Cours Isitech\\RPI\\B3\\.Net\\dev\\BookStoreAPI\\BookStoreAPI.csproj": {}
+    "C:\\Users\\Flaimpeur\\Documents\\Cours Isitech\\RPI\\B3\\.Net\\dev\\BookStoreAPI\\BookStoreAPI.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Flaimpeur\\Documents\\Cours Isitech\\RPI\\B3\\.Net\\dev\\BookStoreAPI\\BookStoreAPI.csproj": {
+    "C:\\Users\\Flaimpeur\\Documents\\Cours Isitech\\RPI\\B3\\.Net\\dev\\BookStoreAPI\\BookStoreAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Flaimpeur\\Documents\\Cours Isitech\\RPI\\B3\\.Net\\dev\\BookStoreAPI\\BookStoreAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Flaimpeur\\Documents\\Cours Isitech\\RPI\\B3\\.Net\\dev\\BookStoreAPI\\BookStoreAPI.csproj",
         "projectName": "BookStoreAPI",
-        "projectPath": "c:\\Users\\Flaimpeur\\Documents\\Cours Isitech\\RPI\\B3\\.Net\\dev\\BookStoreAPI\\BookStoreAPI.csproj",
+        "projectPath": "C:\\Users\\Flaimpeur\\Documents\\Cours Isitech\\RPI\\B3\\.Net\\dev\\BookStoreAPI\\BookStoreAPI.csproj",
         "packagesPath": "C:\\Users\\Flaimpeur\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Flaimpeur\\Documents\\Cours Isitech\\RPI\\B3\\.Net\\dev\\BookStoreAPI\\obj\\",
+        "outputPath": "C:\\Users\\Flaimpeur\\Documents\\Cours Isitech\\RPI\\B3\\.Net\\dev\\BookStoreAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Flaimpeur\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -38,6 +38,20 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
