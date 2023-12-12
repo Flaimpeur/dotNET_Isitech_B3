@@ -26,7 +26,7 @@ public class BookController : ControllerBase
     }
 
     [HttpPost] // La méthode post sert ici a pouvoir intéragir entre l'utilisateur et notre code, ici la liste donc pouvoir rajouter des livres dans la liste
-    public ActionResult<Book> CreateBook(Book book)
+    public ActionResult<Book> AddBooks(Book book)
     {
         books.Add(book); //Ajout du livre écrit par l'utilisateur dans la liste
         return CreatedAtAction(nameof(GetBooks), new{id = book.Id}, book);
