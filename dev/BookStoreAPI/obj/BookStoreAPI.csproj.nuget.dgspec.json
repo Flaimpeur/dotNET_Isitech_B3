@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Flaimpeur\\Documents\\Cours Isitech\\RPI\\B3\\.Net\\dev\\BookStoreAPI\\BookStoreAPI.csproj": {}
+    "c:\\Users\\Flaimpeur\\Documents\\Cours Isitech\\RPI\\B3\\.Net\\dev\\BookStoreAPI\\BookStoreAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Flaimpeur\\Documents\\Cours Isitech\\RPI\\B3\\.Net\\dev\\BookStoreAPI\\BookStoreAPI.csproj": {
+    "c:\\Users\\Flaimpeur\\Documents\\Cours Isitech\\RPI\\B3\\.Net\\dev\\BookStoreAPI\\BookStoreAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Flaimpeur\\Documents\\Cours Isitech\\RPI\\B3\\.Net\\dev\\BookStoreAPI\\BookStoreAPI.csproj",
+        "projectUniqueName": "c:\\Users\\Flaimpeur\\Documents\\Cours Isitech\\RPI\\B3\\.Net\\dev\\BookStoreAPI\\BookStoreAPI.csproj",
         "projectName": "BookStoreAPI",
-        "projectPath": "C:\\Users\\Flaimpeur\\Documents\\Cours Isitech\\RPI\\B3\\.Net\\dev\\BookStoreAPI\\BookStoreAPI.csproj",
+        "projectPath": "c:\\Users\\Flaimpeur\\Documents\\Cours Isitech\\RPI\\B3\\.Net\\dev\\BookStoreAPI\\BookStoreAPI.csproj",
         "packagesPath": "C:\\Users\\Flaimpeur\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Flaimpeur\\Documents\\Cours Isitech\\RPI\\B3\\.Net\\dev\\BookStoreAPI\\obj\\",
+        "outputPath": "c:\\Users\\Flaimpeur\\Documents\\Cours Isitech\\RPI\\B3\\.Net\\dev\\BookStoreAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Flaimpeur\\AppData\\Roaming\\NuGet\\NuGet.Config"
