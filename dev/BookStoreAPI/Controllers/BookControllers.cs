@@ -13,26 +13,21 @@ namespace BookStoreAPI.Controllers; // BookStoreAPI est l'espace de nom racine d
 [ApiController]
 public class BookController : ControllerBase
 {
+    public static List<Book> books = new List<Book>
+    {
+        new Book { Id = 1, Title = "Le seigneur des anneaux", Author = "J.R.R Tolkien" }
+    };
 
     [HttpGet("books")]
     public ActionResult<List<Book>> GetBooks()
     {
-        List<Book> books = new List<Book>
-        {
-            new Book { Id = 1, Title = "Le seigneur des anneaux", Author = "J.R.R Tolkien" }
-        };
         return Ok(books);
     }
 
     [HttpPost("books")]
     public ActionResult<Book> AddBook(Book book)
     {
-        List<Book> books = new List<Book>
-        {
-            new Book { Id = 1, Title = "Le seigneur des anneaux", Author = "J.R.R Tolkien" }
-        };
         books.Add(book);
         return CreatedAtAction(nameof(GetBooks), new{id = book.Id}, book);
-
     }
 }
