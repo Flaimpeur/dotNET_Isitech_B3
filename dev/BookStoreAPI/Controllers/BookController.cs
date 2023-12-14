@@ -162,10 +162,53 @@ public class BookController : ControllerBase
             var booksDto = _mapper.Map<List<BookDto>>(books);
             return Ok(booksDto);
         }
-
-
-        
-
     }
 
+    // Rajout d'un trie alphabetique des livre par les titres
+    [Authorize]
+    [HttpGet("sortBooksByTheTitle")]
+    public async Task<ActionResult<List<BookDto>>> sortBooksByTheTitle()
+    {
+        // ------
+        // -- Récupération de tout les livres en stocke
+        var books = await _dbContext.Books.ToListAsync();
+        var listofBooks = new List<BookDto>();
+
+        foreach (var book in books)
+        {
+            listofBooks.Add(_mapper.Map<BookDto>(book));
+        }
+        // --
+        // ------
+
+        //Trie de la liste des livres par ordre alphabetique des titres
+        listofBooks = listofBooks.OrderBy(b => b.Title).ToList();
+        await _dbContext.SaveChangesAsync();
+        return Ok(listofBooks); // affichage
+    }
+
+    // Rajout d'un trie alphabetique des livres par les auteurs
+    [Authorize]
+    [HttpGet("sortBooksByTheAuthor")]
+    public async Task<ActionResult<List<BookDto>>> sortBooksByTheAuthor()
+    {
+        // ------
+        // -- Récupération de tout les livres en stocke
+        var books = await _dbContext.Books.ToListAsync();
+        var listofBooks = new List<BookDto>();
+
+        foreach (var book in books)
+        {
+            listofBooks.Add(_mapper.Map<BookDto>(book));
+        }
+        // --
+        // ------
+
+        //Trie de la liste des livres par ordre alphabetique des auteurs
+        listofBooks = listofBooks.OrderBy(b => b.Author).ToList();
+        await _dbContext.SaveChangesAsync();
+        return Ok(listofBooks);
+    }
+
+    
 }
