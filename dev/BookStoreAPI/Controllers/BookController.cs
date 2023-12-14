@@ -142,16 +142,15 @@ public class BookController : ControllerBase
         return NoContent();
     }
 
-    //[Authorize]
-    [AllowAnonymous]
-    [HttpGet("{author}")]
-    public async Task<ActionResult<List<BookDto>>> SortBook(string author)
-    {
-        
-        var books = await _dbContext.Books.Where(b => b.Author == author).ToListAsync();
-        //var booksDto = new List<BookDto>();
 
-        //var bookAuthor = await _dbContext.Books.FirstOrDefaultAsync(b => b.Author == author);
+    // Rajout d'une recherche par auteur et affichage des livres uniquement écrit par l'auteur rechercher
+    [Authorize]
+    [HttpGet("{author}")]
+    public async Task<ActionResult<List<BookDto>>> FindAuthor(string author)
+    {
+        // Récupération de tout les livres avec le même auteur
+        var books = await _dbContext.Books.Where(b => b.Author == author).ToListAsync();
+        
         //Vérification si l'auteur existe
         if (books == null)
         {
@@ -159,40 +158,10 @@ public class BookController : ControllerBase
         }   
         else
         {
+            //Affichage dans une liste des livre de l'auteur rechercher
             var booksDto = _mapper.Map<List<BookDto>>(books);
             return Ok(booksDto);
-            //var myBook = await _dbContext.Books.FirstAsync(author);
-            //foreach (var book in books)
-            //{
-            //    booksDto.Add(_mapper.Map<BookDto>(book));
-            //}
-
-            //foreach (var authors in booksDto)
-            //{
-                
-            //}
-
-            //if (booksDto != null)
-            //{
-            //    return Ok(booksDto);
-            //}
-            //else
-            //{
-             //   return Ok("Aucun livre trouver avec cet auteur");
-            //}
-            
         }
-        
-        //Book? findAuthor = await _dbContext.Books.FirstOrDefaultAsync(b => b.Author == book.Author);
-        //if (findAuthor == null)
-        //{
-        //    return BadRequest("Il n'y a pas de livre avec cet Autheur");
-        //}
-
-        //foreach (book in books)
-        //{
-        //    booksDto.Add(_mapper.Map<BookDto>(book));
-        //}
 
 
         
