@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using BookStoreAPI.Entities;
@@ -26,10 +27,13 @@ public class BookController : ControllerBase
     private readonly ApplicationDbContext _dbContext;
     private readonly IMapper _mapper;
 
+    //private BookDto _listBooks;
+
     public BookController(ApplicationDbContext dbContext, IMapper mapper)
     {
         _dbContext = dbContext;
         _mapper = mapper;
+        //_listBooks = listBooks;
     }
 
 
@@ -105,7 +109,7 @@ public class BookController : ControllerBase
         }
 
         bookToUpdate.Author = book.Author;
-        // continuez pour les autres propriétés
+        bookToUpdate.Abstract = book.Abstract;
 
         _dbContext.Entry(bookToUpdate).State = EntityState.Modified;
         await _dbContext.SaveChangesAsync();
@@ -136,6 +140,63 @@ public class BookController : ControllerBase
         _dbContext.Books.Remove(bookToDelete);
         await _dbContext.SaveChangesAsync();
         return NoContent();
+    }
+
+    //[Authorize]
+    [AllowAnonymous]
+    [HttpGet("{author}")]
+    public async Task<ActionResult<List<BookDto>>> SortBook(string author)
+    {
+        
+        var books = await _dbContext.Books.Where(b => b.Author == author).ToListAsync();
+        //var booksDto = new List<BookDto>();
+
+        //var bookAuthor = await _dbContext.Books.FirstOrDefaultAsync(b => b.Author == author);
+        //Vérification si l'auteur existe
+        if (books == null)
+        {
+            return BadRequest("Auteur non trouver");
+        }   
+        else
+        {
+            var booksDto = _mapper.Map<List<BookDto>>(books);
+            return Ok(booksDto);
+            //var myBook = await _dbContext.Books.FirstAsync(author);
+            //foreach (var book in books)
+            //{
+            //    booksDto.Add(_mapper.Map<BookDto>(book));
+            //}
+
+            //foreach (var authors in booksDto)
+            //{
+                
+            //}
+
+            //if (booksDto != null)
+            //{
+            //    return Ok(booksDto);
+            //}
+            //else
+            //{
+             //   return Ok("Aucun livre trouver avec cet auteur");
+            //}
+            
+        }
+        
+        //Book? findAuthor = await _dbContext.Books.FirstOrDefaultAsync(b => b.Author == book.Author);
+        //if (findAuthor == null)
+        //{
+        //    return BadRequest("Il n'y a pas de livre avec cet Autheur");
+        //}
+
+        //foreach (book in books)
+        //{
+        //    booksDto.Add(_mapper.Map<BookDto>(book));
+        //}
+
+
+        
+
     }
 
 }

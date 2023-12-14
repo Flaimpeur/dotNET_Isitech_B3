@@ -4,6 +4,7 @@ namespace BookStoreAPI.Models;
 
 public class BookDto
 {
+    public int Id { get; set; }
     public string Title { get; init; } = default!;
 
     [MaxLength(15)]
