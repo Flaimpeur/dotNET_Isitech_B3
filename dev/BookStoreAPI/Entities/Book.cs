@@ -9,6 +9,7 @@ namespace BookStoreAPI.Entities
         public int Id { get; set; }
         public required string Title { get; init; }
         public string? Author { get; set; }
+        public string? Genre {get; set;}
 
         public string Abstract { get; set; } = string.Empty;
 

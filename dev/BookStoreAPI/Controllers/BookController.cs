@@ -108,6 +108,7 @@ public class BookController : ControllerBase
             return NotFound();
         }
 
+        bookToUpdate.Genre = book.Genre;
         bookToUpdate.Author = book.Author;
         bookToUpdate.Abstract = book.Abstract;
 
@@ -164,6 +165,27 @@ public class BookController : ControllerBase
         }
     }
 
+    // Rajout d'une recherche par genre et affichage des livres uniquement dans ce genre
+    [Authorize]
+    [HttpGet("Genre")]
+    public async Task<ActionResult<List<BookDto>>> FindGenre(string genre)
+    {
+        // Récupération de tout les livres avec le même genre
+        var books = await _dbContext.Books.Where(b => b.Genre == genre).ToListAsync();
+        
+        //Vérification si l'auteur existe
+        if (books == null)
+        {
+            return BadRequest("Genre non trouver");
+        }   
+        else
+        {
+            //Affichage dans une liste des livre du genre rechercher
+            var booksDto = _mapper.Map<List<BookDto>>(books);
+            return Ok(booksDto);
+        }
+    }
+
     // Rajout d'un trie alphabetique des livre par les titres
     [Authorize]
     [HttpGet("sortBooksByTheTitle")]
@@ -210,5 +232,28 @@ public class BookController : ControllerBase
         return Ok(listofBooks);
     }
 
-    
+    // Rajout d'un trie alphabetique des livres par le genre
+    [Authorize]
+    [HttpGet("sortBooksByTheGenre")]
+    public async Task<ActionResult<List<BookDto>>> sortBooksByTheGenre()
+    {
+        // ------
+        // -- Récupération de tout les livres en stocke
+        var books = await _dbContext.Books.ToListAsync();
+        var listofBooks = new List<BookDto>();
+
+        foreach (var book in books)
+        {
+            listofBooks.Add(_mapper.Map<BookDto>(book));
+        }
+        // --
+        // ------
+
+        //Trie de la liste des livres par ordre alphabetique des genres
+        listofBooks = listofBooks.OrderBy(b => b.Genre).ToList();
+        await _dbContext.SaveChangesAsync();
+        return Ok(listofBooks);
+    }
+
+
 }

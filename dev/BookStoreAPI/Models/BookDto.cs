@@ -9,4 +9,6 @@ public class BookDto
 
     [MaxLength(15)]
     public string? Author { get; set; }
+
+    public string? Genre {get; set;}
 }
