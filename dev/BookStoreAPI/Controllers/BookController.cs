@@ -111,6 +111,7 @@ public class BookController : ControllerBase
         bookToUpdate.Genre = book.Genre;
         bookToUpdate.Author = book.Author;
         bookToUpdate.Abstract = book.Abstract;
+        bookToUpdate.IsAvailable = book.IsAvailable;
 
         _dbContext.Entry(bookToUpdate).State = EntityState.Modified;
         await _dbContext.SaveChangesAsync();
@@ -254,6 +255,5 @@ public class BookController : ControllerBase
         await _dbContext.SaveChangesAsync();
         return Ok(listofBooks);
     }
-
 
 }

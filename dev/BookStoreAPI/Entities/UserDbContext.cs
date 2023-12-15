@@ -10,4 +10,6 @@ public class UserDbContext : IdentityDbContext<IdentityUser>
     {
 
     }
+
+    public DbSet<Book> ListBooks { get; set; } //Rajout d'une liste de livre que l'utilisateur à
 }

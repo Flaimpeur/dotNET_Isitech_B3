@@ -11,4 +11,6 @@ public class BookDto
     public string? Author { get; set; }
 
     public string? Genre {get; set;}
+
+    public bool IsAvailable { get; set; } = true; // Ajout de la propriété IsAvailable pour savoir si un livre est disponible pour le louer ou non
 }
